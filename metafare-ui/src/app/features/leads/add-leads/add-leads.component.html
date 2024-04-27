@@ -1,1 +1,137 @@
-<p>Add Leads</p>
+<h1>Add Lead</h1>
+<div class="form-container" >
+       <!-- First Column -->
+    <div class="section" >
+        <h2>Lead Information</h2>
+        <div class="form-group">
+            <label for="prefix">Prefix</label>
+            <select id="prefix" name="prefix">
+                <!-- Options here -->
+            </select>
+        </div>
+        <div class="form-group">
+            <input type="text" id="firstname" name="firstname" required placeholder="First Name">
+            <span class="error-message"></span>
+        </div>
+        <div class="form-group">
+            <input type="text" id="lastname" name="lastname" placeholder="Last Name">
+        </div>
+        <div class="form-group">
+            <label for="organization">Organization</label>
+            <select id="organization" name="organization" required>
+                <!-- Options here -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title">
+        </div>
+        <div class="form-group">
+            <label for="leadstatus">Lead Status</label>
+            <select id="leadstatus" name="leadstatus" required>
+                <!-- Options here -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="userresponsible">User Responsible</label>
+            <select id="userresponsible" name="userresponsible" required>
+                <!-- Options here -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="leadrating">Lead Rating</label>
+            <input type="number" id="leadrating" name="leadrating">
+        </div>
+    </div>
+    
+    <!-- Second Column -->
+    <div class="section" >
+        <h2>Additional Information</h2>
+        <div class="form-group">
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email" formControlName="email" required>
+            <span class="error-message" *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+                Please enter a valid email.
+            </span>
+        </div>
+    
+        <div class="form-group">
+            <label for="phonelabel">Phone*</label>
+            <input type="phone" id="phone" name="phone" formControlName="phone">
+            <span class="error-message" *ngIf="phone?.invalid && (phone?.dirty || phone?.touched)">
+                Please enter a valid phone number.
+            </span>
+        </div>
+        <div class="form-group">
+            <label for="websitelabel">Website</label>
+            <input type="text" id="website" name="website">
+        </div>
+        <div class="form-group">
+            <label for="faxlabel">Fax</label>
+            <input type="text" id="fax" name="fax">
+        </div>
+        <div class="form-group">
+            <label for="industry">Industry</label>
+            <input type="text" id="industry" name="industry">
+        </div>
+        <div class="form-group">
+            <label for="noofemployeeslabel">No Of Employees</label>
+            <input type="number" id="noofemployees" name="noofemployees">
+        </div>
+        <div class="form-group">
+            <label for="leadsource">Lead Source</label>
+            <input type="text" id="leadsource" name="leadsource">
+        </div>
+    </div>
+    <!-- Other sections -->
+    <!-- Address Information -->
+    <div class="section">
+        <h2>Address Information</h2>
+        <!-- Address fields here -->
+        <div class="form-group">
+            <label for="mailingaddresslabel">Mailing Address</label>
+            <input type="textarea" id="mailingaddress" name="mailingaddress" placeholder="Address">
+        </div>
+        <div class="form-group">
+            <select>City</select>
+        </div>
+        <div class="form-group">
+            <select>State</select>
+        </div>
+        <div class="form-group">
+           <input type="input" id="postalcode" name="postalcode" placeholder="Postal Code">
+        </div>
+        <div class="form-group">
+            <select>Country</select>
+        </div>
+    </div>
+
+    <!-- Description Information -->
+    <div class="section">
+        <h2>Description Information</h2>
+        <!-- Description fields here -->
+        <div class="form-group">
+            <label for="descriptionlabel">Description</label>
+            <input type="textarea" id="description" name="description" placeholder="Description">
+        </div>
+    </div>
+
+    <!-- Tag Information -->
+    <div class="section">
+        <h2>Tag Information</h2>
+        <!-- Tag fields here -->
+    </div>
+
+    <!-- Permission -->
+    <div class="section">
+        <h2>Permission</h2>
+        <!-- Permission fields here -->
+    </div>
+
+    <!-- Buttons -->
+    <div class="buttons">
+        <button class="btn-save">Save</button>
+        <button class="btn-cancel">Cancel</button>
+    </div>
+
+</div>

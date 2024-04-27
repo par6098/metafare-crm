@@ -1,17 +1,16 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { AddOpportunityComponent } from './add-opportunity/add-opportunity.component';
+import { CommonModule } from '@angular/common';``
 import { ViewOpportunityComponent } from './view-opportunity/view-opportunity.component';
-
-
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
-    AddOpportunityComponent,
     ViewOpportunityComponent
   ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    BrowserModule
+  ],
+  bootstrap: [ViewOpportunityComponent]
 })
 export class OpportunityModule { }

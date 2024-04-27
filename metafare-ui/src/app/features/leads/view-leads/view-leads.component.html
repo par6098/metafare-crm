@@ -1,6 +1,15 @@
+
+<button routerLink="/leads/add">Add Lead</button>
 <ag-grid-angular
   style="width: 100%; height: 500px;"
   class="ag-theme-alpine"
   [rowData]="rowData"
-  [columnDefs]="columnDefs">
+  [columnDefs]="columnDefs"
+  [pagination]="pagination"
+  [paginationPageSize]="paginationPageSize"
+  [defaultColDef]="defaultColDef"
+  [suppressRowClickSelection]="suppressRowClickSelection"
+  [enableAdvancedFilter]="true"
+  (gridReady)="onGridReady($event)">
 </ag-grid-angular>
+
